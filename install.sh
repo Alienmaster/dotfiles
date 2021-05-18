@@ -12,6 +12,9 @@ files="bashrc zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
 
 ##########
 
+# download submodules
+git submodule update --init --recursive
+
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir

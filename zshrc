@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias
 alias cd..="cd .."
 alias ..="cd .."
-alias lsl="ls -la"
+alias lsl="ls -lah"
 
 # key bindings
 bindkey "^[[1~" beginning-of-line

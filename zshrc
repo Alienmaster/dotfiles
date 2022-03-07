@@ -106,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 alias cd..="cd .."
 alias ..="cd .."
 alias lsl="ls -lah"
+## gpu
+alias gpustati='gpustat -i 2'
 
 # key bindings
 bindkey "^[[1~" beginning-of-line

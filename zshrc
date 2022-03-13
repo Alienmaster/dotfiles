@@ -101,17 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-
-# alias
-alias cd..="cd .."
-alias ..="cd .."
-alias lsl="ls -lah"
-alias µ="cd .."
-alias µµ="cd ../.."
-alias µµµ="cd ../../.."
-alias µµµµ="cd ../../../.."
-## gpu
-alias gpustati='gpustat -i 2'
+./.alias
 
 # key bindings
 bindkey "^[[1~" beginning-of-line

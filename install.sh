@@ -31,7 +31,7 @@ for file in $files; do
     if test -f ~/dotfiles_old/.$file; then
     mv ~/dotfiles_old/.$file{,$(date +'%Y%m%d')}
     fi
-    mv ~/.$file ~/dotfiles_old/
+    cp -L ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done

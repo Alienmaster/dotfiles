@@ -6,9 +6,9 @@
 
 ########## Variables
 
-dir=~/dotfiles                                      # dotfiles directory
-olddir=~/dotfiles_old                               # old dotfiles backup directory
-files="bashrc zshrc oh-my-zsh tmux.conf nanorc"     # list of files/folders to symlink in homedir
+dir=~/dotfiles                                          # dotfiles directory
+olddir=~/dotfiles_old                                   # old dotfiles backup directory
+files="bashrc zshrc oh-my-zsh tmux.conf nanorc alias"   # list of files/folders to symlink in homedir
 
 ##########
 
@@ -28,6 +28,9 @@ echo "...done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
+    if test -f ~/dotfiles_old/.$file; then
+    mv ~/dotfiles_old/.$file{,$(date +'%Y%m%d')}
+    fi
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file

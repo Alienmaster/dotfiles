@@ -1,0 +1,13 @@
+alias cd..="cd .."
+alias ..="cd .."
+alias lsl="ls -lah"
+alias µ="cd .."
+alias µµ="cd ../.."
+alias µµµ="cd ../../.."
+alias µµµµ="cd ../../../.."
+
+# htop
+alias gtop=htop -u $(whoami)
+
+# gpu
+alias gpustati='gpustat -i 2'

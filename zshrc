@@ -106,6 +106,10 @@ source $ZSH/oh-my-zsh.sh
 alias cd..="cd .."
 alias ..="cd .."
 alias lsl="ls -lah"
+alias µ="cd .."
+alias µµ="cd ../.."
+alias µµµ="cd ../../.."
+alias µµµµ="cd ../../../.."
 ## gpu
 alias gpustati='gpustat -i 2'
 

@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-~/.alias
+. ~/.alias
 
 # key bindings
 bindkey "^[[1~" beginning-of-line

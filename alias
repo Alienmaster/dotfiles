@@ -11,3 +11,6 @@ alias gtop='htop -u $(whoami)'
 
 # gpu
 alias gpustati='gpustat -i 2'
+
+# tmux
+alias ptop='tmux split-window -v -l 43 "htop -u $(whoami)" && gpustati'

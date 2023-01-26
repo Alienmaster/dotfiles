@@ -17,3 +17,6 @@ alias ptop='tmux split-window -v -l 43 "htop -u $(whoami)" && gpustati'
 
 # git
 alias gpr='git pull --rebase'
+
+# docker
+alias dps='docker ps | grep'

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="$HOME/dotfiles/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -63,14 +63,14 @@ ZSH_THEME="dallas"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/home/$USER/dotfiles/omz-custom
+ZSH_CUSTOM=$HOME/dotfiles/omz-custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github zsh-autosuggestions)
+plugins=(github zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,3 +110,11 @@ bindkey "^[[4~" end-of-line
 # tmux settings
 setopt noincappendhistory
 setopt nosharehistory
+
+# https://stackoverflow.com/questions/55816863/how-can-i-make-all-tmux-panes-have-their-own-unique-shell-history
+if [[ $TMUX_PANE ]]; then
+  HISTFILE=$HOME/.zsh_history_tmux_${HOST}
+fi
+
+
+. "$HOME/.local/bin/env"

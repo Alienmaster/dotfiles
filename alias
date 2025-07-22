@@ -22,6 +22,7 @@ alias gpr='git pull --rebase'
 # docker
 alias dps='docker ps | grep'
 alias dei='docker exec -it'
+alias dlf='docker logs -f' 
 
 # python
 alias sa='source env/bin/activate'
